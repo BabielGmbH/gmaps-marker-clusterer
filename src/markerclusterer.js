@@ -1,7 +1,4 @@
-// ==ClosureCompiler==
-// @compilation_level ADVANCED_OPTIMIZATIONS
-// @externs_url https://raw.githubusercontent.com/google/closure-compiler/master/contrib/externs/maps/google_maps_api_v3.js
-// ==/ClosureCompiler==
+export default function() {
 
 /**
  * @name Gmaps MarkerClusterer for Google Maps v3
@@ -1220,7 +1217,7 @@ ClusterIcon.prototype.triggerClusterMouseout = function(event) {
  * Adding the cluster icon to the dom.
  * @ignore
  */
-ClusterIcon.prototype.onAdd = function () {
+ClusterIcon.prototype.onAdd = function() {
 	if (typeof this.cluster_.markerClusterer_.onAddCluster_ === 'function') {
 		this.cluster_.markerClusterer_.onAddCluster_(this);
 	}
@@ -1307,7 +1304,7 @@ ClusterIcon.prototype.getPosFromLatLng_ = function(latlng) {
  * Draw the icon.
  * @ignore
  */
-ClusterIcon.prototype.draw = function () {
+ClusterIcon.prototype.draw = function() {
 	if (typeof this.cluster_.markerClusterer_.drawCluster_ === 'function') {
 		this.cluster_.markerClusterer_.drawCluster_(this);
 	}
@@ -1588,3 +1585,6 @@ Cluster.prototype['getMarkers'] = Cluster.prototype.getMarkers;
 ClusterIcon.prototype['onAdd'] = ClusterIcon.prototype.onAdd;
 ClusterIcon.prototype['draw'] = ClusterIcon.prototype.draw;
 ClusterIcon.prototype['onRemove'] = ClusterIcon.prototype.onRemove;
+
+return MarkerClusterer;
+}
